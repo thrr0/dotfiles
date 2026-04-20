@@ -1,0 +1,91 @@
+@import "/home/tomi/.cache/wal/colors-waybar.css";
+
+* {
+    font-family: JetBrainsMonoNL Nerd Font;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: @foreground;
+    border-bottom: 1px solid @color1;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: @color7;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+}
+#workspaces button:not(.active):not(.urgent) {
+    opacity: 0.3;
+}
+#workspaces button.active {
+    color: @foreground;
+    border-bottom: 2px solid @color2;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#custom-cava {
+    color: @color4;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+
+#window {
+    color: @foreground;
+    padding: 0 10px;
+}
+
+#custom-gpu-temp,
+#temperature,
+#cpu,
+#memory,
+#network,
+#wireplumber,
+#clock,
+#tray {
+    padding: 0 8px;
+    color: @foreground;
+}
+
+#cpu {
+    color: @color2;
+}
+
+#memory {
+    color: @color3;
+}
+
+#custom-gpu-temp {
+    color: @color5;
+}
+
+#temperature {
+    color: @color4;
+}
+
+#temperature.critical {
+    color: @color1;
+}
+
+#network {
+    color: @color6;
+}
+
+#wireplumber {
+    color: @color3;
+}
+
+#clock {
+    color: @color7;
+    font-weight: bold;
+}
+
+#tray {
+    padding: 0 5px;
+}

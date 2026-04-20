@@ -1,0 +1,56 @@
+@import "/home/tomi/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+    background-color: @background;
+    border: 2px solid;
+    border-color: @selected-normal-background;
+    border-radius: 8px;
+    width: 500px;
+    padding: 12px;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing: 8px;
+}
+
+inputbar {
+    background-color: @alternate-normal-background;
+    border-radius: 6px;
+    padding: 8px 12px;
+    spacing: 8px;
+    children: [prompt, entry];
+}
+
+prompt {
+    text-color: @selected-normal-background;
+}
+
+entry {
+    text-color: @foreground;
+    placeholder-color: @normal-foreground;
+    placeholder: "Search...";
+}
+
+listview {
+    background-color: transparent;
+    lines: 8;
+    spacing: 2px;
+}
+
+element {
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: @normal-background;
+    text-color: @normal-foreground;
+}
+
+element selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
