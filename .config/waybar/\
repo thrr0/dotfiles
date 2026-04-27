@@ -24,7 +24,6 @@
         "network",
         "custom/separator",
         "wireplumber",
-        "custom/separator",
         "clock"
     ],
 
@@ -48,7 +47,7 @@
 },
 
 "custom/separator": {
-    "format": "|",
+    "format": ":",           
     "interval": "once",
     "tooltip": false
 },
@@ -102,7 +101,7 @@
     },
 
     "wireplumber": {
-        "format": "vol: {volume}%",
+        "format": " vol: {volume}%",
         "format-muted": " muted",
         "on-click": "pavucontrol"
     },

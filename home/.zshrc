@@ -5,7 +5,7 @@ alias grep='grep --color=auto'
 alias hyprconf='nvim ~/.config/hypr/hyprland.conf'
 alias vi='nvim'
 alias rc='nvim ~/.zshrc'
-
+alias zopen='file=$(find ~ -type f -name "*.pdf" | fzf) && nohup zathura "$file" &>/dev/null & disown'
 # PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 
