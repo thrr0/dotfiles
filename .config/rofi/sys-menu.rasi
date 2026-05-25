@@ -1,0 +1,74 @@
+@import "/home/tomi/.cache/wal/colors-rofi-dark.rasi"
+
+window {
+    background-color: @background;
+    border:           1px solid;
+    border-color:     @selected-normal-background;
+    border-radius:    8px;
+    width:            420px;
+    padding:          12px;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing:          8px;
+}
+
+inputbar {
+    background-color: @alternate-normal-background;
+    border-radius:    6px;
+    padding:          8px 12px;
+    spacing:          8px;
+    children:         [prompt, entry];
+}
+
+prompt {
+    text-color: @selected-normal-background;
+    font:       "JetBrains Mono ExtraBold 11";
+}
+
+entry {
+    text-color:        @foreground;
+    placeholder-color: @normal-foreground;
+    placeholder:       "filter...";
+    font:              "JetBrains Mono ExtraBold 11";
+}
+
+message {
+    background-color: @alternate-normal-background;
+    border-radius:    6px;
+    padding:          8px 12px;
+    border:           1px solid;
+    border-color:     @selected-normal-background;
+}
+
+textbox {
+    text-color:       @foreground;
+    background-color: transparent;
+    font:             "JetBrains Mono ExtraBold 10";
+}
+
+listview {
+    background-color: transparent;
+    lines:            12;
+    spacing:          2px;
+    scrollbar:        false;
+}
+
+element {
+    padding:          6px 12px;
+    border-radius:    6px;
+    background-color: transparent;
+    text-color:       @normal-foreground;
+}
+
+element selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    font:             "JetBrains Mono ExtraBold 11";
+}

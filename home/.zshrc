@@ -6,6 +6,9 @@ alias hyprconf='nvim ~/.config/hypr/hyprland.conf'
 alias vi='nvim'
 alias rc='nvim ~/.zshrc'
 alias zopen='file=$(find ~ -type f -name "*.pdf" | fzf) && nohup zathura "$file" &>/dev/null & disown'
+# alias rea='(PIPEWIRE_LATENCY="64/48000" nohup pw-jack reaper > /dev/null 2>&1 &) && exit'
+alias rea='(GDK_BACKEND=x11 PIPEWIRE_LATENCY="64/48000" nohup pw-jack reaper > /dev/null 2>&1 &) && exit'
+
 # PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 

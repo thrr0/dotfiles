@@ -2,8 +2,9 @@
 
 * {
     font-family: JetBrainsMonoNL Nerd Font;
-    font-size: 13px;
+    font-size: 11px;  /* era 13px */
     min-height: 0;
+    font-weight: 900;
 }
 
 window#waybar {
@@ -13,7 +14,7 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 8px;
+    /* padding: 0 6px;  era 0 8px */ 
     color: @color7;
     background: transparent;
     border-bottom: 2px solid transparent;
@@ -32,13 +33,13 @@ window#waybar {
 
 #custom-cava {
     color: @color4;
-    padding: 0 10px;
-    letter-spacing: 2px;
+    padding: 0 8px;   /* era 0 10px */
+    letter-spacing: 1px;  /* era 2px */
 }
 
 #window {
     color: @foreground;
-    padding: 0 10px;
+    padding: 0 8px;  /* era 0 10px */
 }
 
 #custom-gpu-temp,
@@ -87,5 +88,5 @@ window#waybar {
 }
 
 #tray {
-    padding: 0 5px;
+    padding: 0 4px;  /* era 0 5px */
 }

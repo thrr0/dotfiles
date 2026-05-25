@@ -55,7 +55,7 @@ configuration {
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
 /*	combi-display-format: "{mode} {text}";*/
-/*	matching-negate-char: '-' /* unsupported */;*/
+/*	matching-negate-char: '-' /* unsupported */; */
 /*	cache-dir: ;*/
 /*	window-thumbnail: false;*/
 /*	drun-use-desktop-cache: false;*/
@@ -165,5 +165,7 @@ configuration {
       directories-first: true;
       sorting-method:    "name";
   }
+
+font: "JetBrains Mono ExtraBold 12";
 }
   @theme "~/.config/rofi/theme.rasi"

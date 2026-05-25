@@ -31,15 +31,26 @@
 "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-        "1": "󰆍",
-        "2": "󰈹",
-        "3": "󰂽",
-        "4": "󰝚",
-        "5": "󰊗",
-        "6": "󰙯",
-        "10": "󰍹",
-        "urgent": "󰗖",
-        "default": "󰊠"
+        // "1": "󰆍",
+        // "2": "󰈹",
+        // "3": "󰂽",
+        // "4": "󰝚",
+        // "5": "󰊗",
+        // "6": "󰙯",
+        // "10": "󰍹",
+        // "urgent": "󰗖",
+        // "default": "󰊠"
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "0",
+        "urgent": "!"
     },
     "persistent-workspaces": {},
     "show-special": false,
@@ -64,7 +75,7 @@
     },
 
 "custom/gpu-temp": {
-    "exec": "nvidia-smi --query-gpu=temperature.gpu,utilization.gpu --format=csv,noheader,nounits | awk -F', ' '{print \"GPU: \"$2\"%  \"$1\"°\"}'",
+    "exec": "nvidia-smi --query-gpu=temperature.gpu,utilization.gpu --format=csv,noheader,nounits | awk -F', ' '{print \"GPU \"$2\"%  \"$1\"°\"}'",
     "interval": 2,
     "format": "{}",
     "tooltip": false
@@ -83,14 +94,14 @@
     "max-length": 10
 },
 "custom/cpu": {
-    "exec": "cpu_usage=$(top -bn1 | grep 'Cpu(s)' | awk '{print $2}') && cpu_temp=$(sensors k10temp-pci-00c3 | grep 'Tctl' | awk '{print $2}' | tr -d '+°C') && echo \"CPU: ${cpu_usage}%  ${cpu_temp}°\"",
+    "exec": "cpu_usage=$(top -bn1 | grep 'Cpu(s)' | awk '{print $2}') && cpu_temp=$(sensors k10temp-pci-00c3 | grep 'Tctl' | awk '{print $2}' | tr -d '+°C') && echo \"CPU ${cpu_usage}%  ${cpu_temp}°\"",
     "interval": 2,
     "format": "{}",
     "tooltip": false
 },
 "memory": {
         "interval": 5,
-        "format": "RAM: {used:0.1f}G/{total:0.1f}G"
+        "format": "RAM {used:0.1f}G/{total:0.1f}G"
     },
 
     "network": {
@@ -102,14 +113,14 @@
     },
 
     "wireplumber": {
-        "format": "vol: {volume}%",
+        "format": "vol {volume}%",
         "format-muted": " muted",
         "on-click": "pavucontrol"
     },
 
     "clock": {
         "interval": 5,
-        "format": "{:%H:%M:%S}",
+        "format": "{:%H:%M:%S %d-%m-%y}",
         "format-alt": "{:%Y-%m-%d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "timezone": "America/Argentina/Buenos_Aires"
