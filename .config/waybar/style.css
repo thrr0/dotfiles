@@ -10,7 +10,7 @@
 window#waybar {
     background-color: rgba(0, 0, 0, 0.5);
     color: @foreground;
-    /* border-bottom: 1px solid @color1; */
+    border-bottom: 1px solid @color1;
 }
 
 #workspaces button {
@@ -49,7 +49,7 @@ window#waybar {
 #network,
 #wireplumber,
 #clock,
-#tray {
+#tray menu{
     /* padding: 0 8px; */
     color: @foreground;
 }

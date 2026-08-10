@@ -1,17 +1,18 @@
 {
     "layer": "top",
-    "position": "bottom",
+    "position": "top",
     "height": 30,
     "spacing": 4,
 
     "modules-left": [
         "hyprland/workspaces",
-        "tray",
-        "custom/cava",
-        "hyprland/window"
+        "group/tray-drawer"
+        // "custom/cava",
+        // "hyprland/window"
     ],
 
     "modules-center": [
+        "clock"
     ],
 
     "modules-right": [
@@ -24,8 +25,6 @@
         "network",
         "custom/separator",
         "wireplumber",
-        "custom/separator",
-        "clock"
     ],
 
 "hyprland/workspaces": {
@@ -120,7 +119,8 @@
 
     "clock": {
         "interval": 5,
-        "format": "{:%H:%M:%S %d-%m-%y}",
+        // "format": "{:%H:%M:%S %d-%m-%y}",
+         "format": "{:%d-%m %H:%M:%S }",
         "format-alt": "{:%Y-%m-%d}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "timezone": "America/Argentina/Buenos_Aires"
@@ -128,5 +128,22 @@
 
     "tray": {
         "spacing": 10
-    }
+    },
+ "group/tray-drawer": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 500,
+            "children-class": "tray-child",
+            "transition-left-to-right": true// Cambia a true si tu barra está a la izquierda
+        },
+        "modules": [
+            "custom/tray-icon", // El botón principal que abrirá el menú
+            "tray"              // El tray real con todos tus procesos
+        ]
+    },
+
+    "custom/tray-icon": {
+        "format": " ", // Puedes usar el ícono que prefieras (ej. una flecha o un engranaje)
+        "tooltip": false
+    },
 }

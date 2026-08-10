@@ -1,6 +1,6 @@
 # Created by newuser for 5.9
 ## Aliases
-alias ls='ls --color=auto'
+alias ls='ls -a --color=auto'
 alias grep='grep --color=auto'
 alias hyprconf='nvim ~/.config/hypr/hyprland.conf'
 alias vi='nvim'
@@ -18,6 +18,9 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 [[ -z "$KITTY_WINDOW_ID" ]] || fastfetch
 eval "$(starship init zsh)"
 export PATH="$HOME/.local/bin:$PATH"
