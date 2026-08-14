@@ -1,0 +1,7 @@
+{
+    "wallpaper_path": "/home/tomi/.config/wallpapers/",
+    "cache_path": "/home/tomi/.cache/quickshell/thumbs/",
+    "number_of_pictures": 9,
+    "border_color": "#80FFFFFF",
+    "cache_batch_size": 20
+}

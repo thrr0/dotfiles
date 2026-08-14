@@ -18,21 +18,18 @@ link() {
   local dst="$2"
   mkdir -p "$(dirname "$dst")"
   backup "$dst"
-  ln -sf "$src" "$dst"
+  ln -sfn "$src" "$dst"
   echo "Linked: $dst"
 }
 
 # ~/.config entries
-for dir in autostart btop cava fastfetch gtk-3.0 gtk-4.0 hypr Kvantum kitty \
-           nwg-look qt6ct rofi starship wal waybar; do
+for dir in btop cava dunst fastfetch gtk-3.0 gtk-4.0 hypr Kvantum kitty \
+           nwg-look qt6ct quickshell rofi wal waybar wlogout; do
   link "$DOTFILES/.config/$dir" "$CONFIG/$dir"
 done
 
 # Standalone files in .config
 link "$DOTFILES/.config/starship.toml"   "$CONFIG/starship.toml"
-link "$DOTFILES/.config/hyprland.conf"   "$CONFIG/hyprland.conf"
-link "$DOTFILES/.config/monitors.conf"   "$CONFIG/monitors.conf"
-link "$DOTFILES/.config/workspaces.conf" "$CONFIG/workspaces.conf"
 
 # Scripts
 link "$DOTFILES/.config/scripts" "$CONFIG/scripts"
